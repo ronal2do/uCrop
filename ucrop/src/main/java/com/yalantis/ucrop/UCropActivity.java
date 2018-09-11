@@ -92,7 +92,7 @@ public class UCropActivity extends AppCompatActivity {
     private int mToolbarCropDrawable;
     private int mLogoColor;
 
-    private boolean mShowBottomControls;
+    private boolean mShowBottomControls = false;
     private boolean mShowLoader = true;
 
     private UCropView mUCropView;
@@ -285,26 +285,26 @@ public class UCropActivity extends AppCompatActivity {
         setupAppBar();
         initiateRootViews();
 
-//        if (mShowBottomControls) {
-//            ViewGroup photoBox = findViewById(R.id.ucrop_photobox);
-//            View.inflate(this, R.layout.ucrop_controls, photoBox);
-//
-//            mWrapperStateAspectRatio = findViewById(R.id.state_aspect_ratio);
-//            mWrapperStateAspectRatio.setOnClickListener(mStateClickListener);
-//            mWrapperStateRotate = findViewById(R.id.state_rotate);
-//            mWrapperStateRotate.setOnClickListener(mStateClickListener);
-//            mWrapperStateScale = findViewById(R.id.state_scale);
-//            mWrapperStateScale.setOnClickListener(mStateClickListener);
-//
-//            mLayoutAspectRatio = findViewById(R.id.layout_aspect_ratio);
-//            mLayoutRotate = findViewById(R.id.layout_rotate_wheel);
-//            mLayoutScale = findViewById(R.id.layout_scale_wheel);
-//
-//            setupAspectRatioWidget(intent);
-//            setupRotateWidget();
-//            setupScaleWidget();
-//            setupStatesWrapper();
-//        }
+        if (mShowBottomControls) {
+            ViewGroup photoBox = findViewById(R.id.ucrop_photobox);
+            View.inflate(this, R.layout.ucrop_controls, photoBox);
+
+            mWrapperStateAspectRatio = findViewById(R.id.state_aspect_ratio);
+            mWrapperStateAspectRatio.setOnClickListener(mStateClickListener);
+            mWrapperStateRotate = findViewById(R.id.state_rotate);
+            mWrapperStateRotate.setOnClickListener(mStateClickListener);
+            mWrapperStateScale = findViewById(R.id.state_scale);
+            mWrapperStateScale.setOnClickListener(mStateClickListener);
+
+            mLayoutAspectRatio = findViewById(R.id.layout_aspect_ratio);
+            mLayoutRotate = findViewById(R.id.layout_rotate_wheel);
+            mLayoutScale = findViewById(R.id.layout_scale_wheel);
+
+            setupAspectRatioWidget(intent);
+            setupRotateWidget();
+            setupScaleWidget();
+            setupStatesWrapper();
+        }
     }
 
     /**
