@@ -29,7 +29,8 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/ucrop_height_divider_shadow"
         android:layout_above="@+id/wrapper_states"
-        android:background="@drawable/ucrop_shadow_upside"/>
+        android:background="@drawable/ucrop_shadow_upside"
+        android:contentDescription="TODO" />
 
     <LinearLayout
         android:id="@+id/wrapper_states"
