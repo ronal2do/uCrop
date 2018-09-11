@@ -10,17 +10,7 @@
     <TextView
         android:id="@+id/text_view_rotate"
         style="@style/ucrop_TextViewWidgetText"
-        android:text="100°"/>
-
-    <com.yalantis.ucrop.view.widget.HorizontalProgressWheelView
-        android:id="@+id/rotate_scroll_wheel"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/text_view_rotate"
-        android:layout_toEndOf="@+id/wrapper_reset_rotate"
-        android:layout_toLeftOf="@+id/wrapper_rotate_by_angle"
-        android:layout_toRightOf="@+id/wrapper_reset_rotate"
-        android:layout_toStartOf="@+id/wrapper_rotate_by_angle"/>
+        android:text="@string/ucrop__100"/>
 
     <FrameLayout
         android:id="@+id/wrapper_reset_rotate"
